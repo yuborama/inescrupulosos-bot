@@ -1,0 +1,16 @@
+{
+  "name": "inescrupulosos-bot",
+  "version": "1.0.0",
+  "description": "bot de manejo de actulizaciones de capitulos",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "keywords": [
+    "bot",
+    "inescrupulosos",
+    "scan"
+  ],
+  "author": "Yuborama",
+  "license": "ISC"
+}
