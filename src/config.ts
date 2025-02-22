@@ -1,4 +1,5 @@
 import { cleanEnv, str } from "envalid";
+import 'dotenv/config';
 
 export const config = cleanEnv(process.env, {
   DISCORD_TOKEN: str({
@@ -10,6 +11,12 @@ export const config = cleanEnv(process.env, {
     desc: "Discord client ID",
     example: "123456789012345678",
     docs: "https://discord.com/developers/docs",
+  }),
+  DISCORD_GUILD_ID: str({
+    desc: "Discord guild ID",
+    example: "123456789012345678",
+    docs: "https://discord.com/developers/docs",
+    default: ""
   }),
 });
 
