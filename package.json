@@ -2,15 +2,48 @@
   "name": "inescrupulosos-bot",
   "version": "1.0.0",
   "description": "bot de manejo de actulizaciones de capitulos",
-  "main": "index.js",
+  "author": "Yuborama",
+  "license": "ISC",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "start"
+    "dev": "tsx watch src/index.ts",
+    "start": "node .",
+    "build": "tsup src/index.ts --minify",
+    "format": "prettier --write \"**/*.{json,ts}\"",
+    "lint": "eslint . --ext ts --fix",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "prepare": "husky install"
   },
   "keywords": [
     "bot",
-    "inescrupulosos",
-    "scan"
+    "inescrupulosos scan"
   ],
-  "author": "Yuborama",
-  "license": "ISC"
+  "dependencies": {
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.4.7",
+    "envalid": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "@typescript-eslint/eslint-plugin": "^8.24.1",
+    "@typescript-eslint/parser": "^8.24.1",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-n": "^17.15.1",
+    "eslint-plugin-promise": "^7.2.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.5.2",
+    "tsup": "^8.3.6",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
 }
