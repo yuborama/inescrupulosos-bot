@@ -10,11 +10,11 @@ export const client = new Client({
 
 client.once("ready", () => {
   // forzar la actualización de comandos
-  /*  deployCommands({ guildId: config.DISCORD_GUILD_ID })
+   deployCommands({ guildId: config.DISCORD_GUILD_ID })
     .then(() =>
       console.log(`Comandos registrados en el servidor con ID: ${config.DISCORD_GUILD_ID}`),
     )
-    .catch((error) => console.error("Error al registrar comandos:", error)); */
+    .catch((error) => console.error("Error al registrar comandos:", error));
   console.log("Discord bot is ready! 🤖");
 });
 
